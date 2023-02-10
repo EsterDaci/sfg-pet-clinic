@@ -25,7 +25,6 @@
             <connection>scm:git:git://github.com:EsterDaci/sfg-pet-clinic.git</connection>
             <developerConnection>scm:git:git://github.com:EsterDaci/sfg-pet-clinic.git</developerConnection>
             <url>https://github.com/EsterDaci/sfg-pet-clinic</url>
-          <tag>sfg-pet-clinic</tag>
   </scm>
 
     <build>
