@@ -14,23 +14,21 @@
     </parent>
     <groupId>guru.springframework</groupId>
     <artifactId>sfg-pet-clinic</artifactId>
-    <version>1</version>
+    <version>0.0.1-SNAPSHOT</version>
     <name>sfg-pet-clinic</name>
     <description>sfg-pet-clinic</description>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>17</java.version>
+        <java.version>1.8.0</java.version>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
 
-        <scm>
-            <connection>scm:git:git://github.com:EsterDaci/sfg-pet-clinic.git</connection>
-            <developerConnection>scm:git:git://github.com:EsterDaci/sfg-pet-clinic.git</developerConnection>
-            <url>https://github.com/EsterDaci/sfg-pet-clinic</url>
-  </scm>
+    <scm>
+        <developerConnection>scm:git:git@github.com:EsterDaci/sfg-pet-clinic.git</developerConnection>
 
+    </scm>
     <build>
         <pluginManagement>
         <plugins>

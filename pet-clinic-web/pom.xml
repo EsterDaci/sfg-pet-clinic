@@ -9,7 +9,7 @@
 
     <groupId>org.example</groupId>
     <artifactId>pet-clinic-web</artifactId>
-    <version>1.0</version>
+    <version>0.0.1-SNAPSHOT</version>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
