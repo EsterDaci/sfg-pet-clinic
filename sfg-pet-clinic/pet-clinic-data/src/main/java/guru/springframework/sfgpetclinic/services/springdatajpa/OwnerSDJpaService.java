@@ -9,7 +9,6 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
-import java.util.Optional;
 import java.util.Set;
 
 @Service
@@ -28,15 +27,21 @@ public class OwnerSDJpaService implements OwnerService {
 
     @Override
     public Set<Owner> findAll() {
-        return new HashSet<>(ownerRepository.findAll());
+
+        Set<Owner> set= new HashSet<>();
+        Iterable<Owner> iterable = ownerRepository.findAll();
+        for (Owner owner : iterable) {
+            set.add(owner);
+        }
+        return set;
+
     }
 
 
     @Override
     public Owner findById(Long aLong) {
-        Optional<Owner> optionalOwner= Optional.ofNullable(ownerRepository.findById(aLong));
 
-        return optionalOwner.orElse(null);
+        return ownerRepository.findById(aLong).orElse(null);
     }
 
     @Override

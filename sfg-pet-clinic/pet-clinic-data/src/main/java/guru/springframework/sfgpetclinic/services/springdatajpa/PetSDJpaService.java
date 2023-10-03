@@ -7,7 +7,6 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
-import java.util.Optional;
 import java.util.Set;
 @Service
 @Profile("springdatajpa")
@@ -21,14 +20,19 @@ public class PetSDJpaService implements PetService {
 
     @Override
     public Set<Pet> findAll() {
-        return new HashSet<>(petRepository.findAll());
+
+        Set<Pet> set= new HashSet<>();
+        Iterable<Pet> iterable = petRepository.findAll();
+        for (Pet pet : iterable) {
+            set.add(pet);
+        }
+        return set;
+
     }
 
     @Override
     public Pet findById(Long aLong) {
-        Optional<Pet> optionalPet= Optional.ofNullable(petRepository.findById(aLong));
-
-        return optionalPet.orElse(null);
+        return petRepository.findById(aLong).orElse(null);
     }
 
     @Override

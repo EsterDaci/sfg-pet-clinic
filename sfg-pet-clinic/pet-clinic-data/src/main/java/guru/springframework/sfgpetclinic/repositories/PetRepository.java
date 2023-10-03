@@ -1,9 +1,8 @@
 package guru.springframework.sfgpetclinic.repositories;
 
 import guru.springframework.sfgpetclinic.model.Pet;
-import guru.springframework.sfgpetclinic.services.CrudService;
-import org.springframework.stereotype.Repository;
+import org.springframework.data.repository.CrudRepository;
 
-@Repository
-public interface PetRepository extends CrudService<Pet,Long> {
+
+public interface PetRepository extends CrudRepository<Pet,Long> {
 }

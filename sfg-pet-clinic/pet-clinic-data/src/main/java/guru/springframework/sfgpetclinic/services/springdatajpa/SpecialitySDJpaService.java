@@ -7,7 +7,6 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
-import java.util.Optional;
 import java.util.Set;
 
 @Service
@@ -24,14 +23,17 @@ public class SpecialitySDJpaService implements SpecialitiesService {
     @Override
     public Set<Speciality> findAll() {
 
-        return new HashSet<>(specialityRepository.findAll());
+        Set<Speciality> set= new HashSet<>();
+        Iterable<Speciality> iterable = specialityRepository.findAll();
+        for (Speciality speciality : iterable) {
+            set.add(speciality);
+        }
+        return set;
     }
 
     @Override
     public Speciality findById(Long aLong) {
-        Optional<Speciality> optionalSpeciality= Optional.ofNullable(specialityRepository.findById(aLong));
-
-        return optionalSpeciality.orElse(null);
+        return specialityRepository.findById(aLong).orElse(null);
     }
 
     @Override

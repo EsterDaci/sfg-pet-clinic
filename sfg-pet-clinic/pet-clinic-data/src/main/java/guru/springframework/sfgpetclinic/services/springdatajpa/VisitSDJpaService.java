@@ -7,7 +7,6 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
-import java.util.Optional;
 import java.util.Set;
 
 @Service
@@ -21,14 +20,18 @@ public class VisitSDJpaService implements VisitService {
 
     @Override
     public Set<Visit> findAll() {
-        return new HashSet<>(visitRepository.findAll());
+
+        Set<Visit> set= new HashSet<>();
+        Iterable<Visit> iterable = visitRepository.findAll();
+        for (Visit visit : iterable) {
+            set.add(visit);
+        }
+        return set;
     }
 
     @Override
     public Visit findById(Long aLong) {
-        Optional<Visit> optionalVisit= Optional.ofNullable(visitRepository.findById(aLong));
-
-        return optionalVisit.orElse(null);
+        return visitRepository.findById(aLong).orElse(null);
     }
 
     @Override
