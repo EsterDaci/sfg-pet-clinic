@@ -59,11 +59,13 @@ public class DataLoader implements CommandLineRunner {
         owner1.setCity("Tirane");
         owner1.setTelephone("12345");
 
+
         Pet mikesPET = new Pet();
         mikesPET.setPetType(savedDogPetType);
         mikesPET.setOwner(owner1);
         mikesPET.setBirthDate(LocalDate.now());
         mikesPET.setName("TOBI");
+
 
         owner1.getPets().add(mikesPET);
 
