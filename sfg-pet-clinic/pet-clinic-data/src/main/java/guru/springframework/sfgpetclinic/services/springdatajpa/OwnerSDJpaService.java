@@ -24,7 +24,6 @@ public class OwnerSDJpaService implements OwnerService {
         this.petTypeRepository = petTypeRepository;
     }
 
-
     @Override
     public Set<Owner> findAll() {
 
