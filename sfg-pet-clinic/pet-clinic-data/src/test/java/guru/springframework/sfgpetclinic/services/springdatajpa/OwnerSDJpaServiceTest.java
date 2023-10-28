@@ -37,7 +37,6 @@ class OwnerSDJpaServiceTest {
     void setUp() {
         returnOwner= Owner.builder().id(1L).lastName(smith1).build();
     }
-
     @Test
     void findAll() {
         Set<Owner> ownerSet=new HashSet<>();
