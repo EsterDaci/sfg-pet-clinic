@@ -19,8 +19,10 @@
     <description>sfg-pet-clinic</description>
     <properties>
         <java.version>17</java.version>
+        <JAVA_HOME>C:\Users\User\Downloads\jdk-17_windows-x64_bin\jdk-17.0.8</JAVA_HOME>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
+        <executable>${JAVA_HOME}/bin/javac</executable>
     </properties>
 
     <build>
